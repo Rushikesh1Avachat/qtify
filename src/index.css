@@ -6,8 +6,7 @@
   --color-white: #ffffff;
 }
 
-body {
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-  -webkit-font-smoothing: antialiased;
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif; /* Global font fallback */
 }

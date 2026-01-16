@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "./Button.module.css";
 
 const Button = ({ text }) => {
@@ -5,4 +6,3 @@ const Button = ({ text }) => {
 };
 
 export default Button;
-

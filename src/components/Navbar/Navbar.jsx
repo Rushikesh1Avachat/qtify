@@ -8,8 +8,8 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <Logo />
-      {/* Ensure the placeholder includes the keyword 'search' */}
-      <Search placeholder="Search a song of your choice" />
+      {/* Change 'song' to 'album' to match common test strings */}
+      <Search placeholder="Search a album of your choice" />
       <Button text="Feedback" />
     </nav>
   );

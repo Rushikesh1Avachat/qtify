@@ -1,9 +1,10 @@
 .hero {
-  height: 529px; /* Adjust height based on Figma if necessary */
-  background-color: var(--color-black); /* Ensure this variable is defined in index.css */
+  /* Aligns with your current CSS logic */
+  height: 529px; 
+  background-color: var(--color-black); /* Defined as #121212 */
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: center; /* Vertically centered */
+  justify-content: center; /* Horizontally centered */
   gap: 40px;
   color: var(--color-white);
   font-family: "Poppins", sans-serif;
@@ -17,7 +18,6 @@
   margin: 0;
 }
 
-/* Optional: If you want to ensure the image doesn't scale weirdly */
 .hero img {
   display: flex;
   object-fit: contain;
