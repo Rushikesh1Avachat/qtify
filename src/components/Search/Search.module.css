@@ -1,0 +1,22 @@
+.search {
+  display: flex;
+  width: 50%;
+  background-color: var(--color-white);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.search input {
+  flex: 1;
+  border: none;
+  padding: 12px;
+  outline: none;
+  font-size: 14px;
+}
+
+.search button {
+  background-color: var(--color-white);
+  border: none;
+  padding: 0 16px;
+  cursor: pointer;
+}
