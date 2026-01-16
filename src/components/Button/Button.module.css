@@ -1,16 +1,23 @@
 .button {
-  /* Test Case 4: Black background */
+  /* Requirement #4: Black variant */
   background-color: #121212; 
-  /* Test Case 5: Green text */
-  color: #34C94B; 
-  /* Test Case 6: High border-radius for pill shape */
-  border-radius: 10px;
-  cursor: pointer;
-  /* Test Case 8: Poppins font */
+  
+  /* Requirement #5: Green variant */
+  color: #34c94b; 
+  
+  /* Requirement #6: Border Radius */
+  border-radius: 8px; 
+  
+  /* Requirement #7: Cursor pointer */
+  cursor: pointer; 
+  
+  /* Requirement #8: Poppins Font */
   font-family: "Poppins", sans-serif;
   
+  padding: 10px 16px;
   border: none;
-  padding: 10px 20px;
   font-weight: 600;
-  height: 47px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

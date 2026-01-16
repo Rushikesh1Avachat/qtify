@@ -1,90 +1,45 @@
 .wrapper {
-  position: relative;
   display: flex;
   align-items: center;
+  width: 568px; /* Standard Qtify desktop width */
   height: 48px;
-}
-
-.searchContainer {
-  display: flex;
-  align-items: stretch;
-  height: 100%;
+  position: relative;
 }
 
 .search {
-  padding: 14px 20px;
+  width: 100%;
   height: 100%;
-  border-radius: 8px 0 0 8px; /* Correctly rounding left side only */
-  border: 1px solid var(--color-black);
-  width: 502px;
+  padding: 0 15px;
+  
+  /* Matches the image styling */
+  background-color: #ffffff;
+  border: 1px solid #121212;
+  border-radius: 8px 0 0 8px; /* Left side rounded */
+  
+  /* Font and text styling */
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   outline: none;
 }
 
 .searchButton {
-  border-radius: 0 8px 8px 0; /* Correctly rounding right side only */
-  padding: 0 20px;
+  width: 66px;
   height: 100%;
-  border: 1px solid var(--color-black);
-  border-left: none;
-  background-color: var(--color-white);
-  cursor: pointer;
   display: flex;
-  align-items: center;
   justify-content: center;
-}
-
-/* Dropdown Styles */
-.dropdown {
-  position: absolute;
-  top: 52px;
-  width: 100%;
-  background-color: var(--color-black);
-  border: 1px solid var(--color-primary);
-  border-radius: 8px;
-  max-height: 400px;
-  overflow-y: auto;
-  z-index: 1000;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.dropdownItem {
-  border-bottom: 1px solid #323232;
+  align-items: center;
+  
+  /* Border styling to match the input */
+  background-color: #ffffff;
+  border: 1px solid #121212;
+  border-left: none; /* Removes double border between input and button */
+  border-radius: 0 8px 8px 0; /* Right side rounded */
+  
   cursor: pointer;
 }
 
-.dropdownItem:hover {
-  background-color: #323232;
-}
-
-.listElement {
-  padding: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: var(--color-white);
-}
-
-.content {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.albumTitle {
-  font-size: 16px;
-  margin: 0;
-}
-
-.albumArtists {
-  font-size: 12px;
-  margin: 0;
-  color: #888;
-}
-
-.follows {
-  font-size: 14px;
+/* Ensure the SVG icon inside matches the image size */
+.searchButton svg {
+  width: 20px;
+  height: 20px;
 }

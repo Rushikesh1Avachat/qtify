@@ -1,30 +1,13 @@
 .navbar {
   width: 100%;
   height: 74px;
-  background-color: #34c94b; /* Explicitly use Primary Green */
+  background-color: var(--color-primary); /* Usually green in Crio projects */
   display: flex;
-  align-items: center; /* Vertical centering */
+  align-items: center; /* Requirement #2: Vertically centered */
   justify-content: space-between;
-  padding: 0 32px; /* Space to the left of Logo and right of Button */
-  box-sizing: border-box;
+  padding: 0 32px; /* Requirement #2: Space to the left of the logo */
 }
-.button {
-  /* Test Case 4: Black background variant */
-  background-color: #121212; 
-  /* Test Case 5: Green text color variant */
-  color: #34c94b; 
-  /* Test Case 6: Border-radius */
-  border-radius: 12px;
-  /* Test Case 7: Cursor pointer on hover */
-  cursor: pointer;
-  /* Test Case 8: Poppins font */
-  font-family: "Poppins", sans-serif;
-  
-  border: none;
-  padding: 10px 20px;
-  font-weight: 600;
-  height: 47px;
-}
+
 .logoWrapper {
   display: flex;
   align-items: center;

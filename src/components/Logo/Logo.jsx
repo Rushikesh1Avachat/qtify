@@ -1,10 +1,10 @@
 import React from "react";
 import LogoImage from "../../assets/logo.png";
-import styles from "./Logo.module.css";
 
 const Logo = () => {
   return (
-    <div className={styles.logoDiv}>
+    // Style this wrapper or the image directly to ensure it fits the height
+    <div style={{ display: "flex", alignItems: "center" }}>
       <img src={LogoImage} alt="logo" width={67} />
     </div>
   );
