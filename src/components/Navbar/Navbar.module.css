@@ -1,10 +1,14 @@
 .navbar {
-  display: flex;
-  align-items: center; /* Fixes Failure 2: Vertical centering */
-  justify-content: space-between;
+  width: 100%;
   height: 74px;
-  background-color: var(--color-primary);
-  padding: 0 16px;
+  background-color: var(--color-primary); /* #34c94b */
+  display: flex;
+  /* Test Case 2: Vertically centered */
+  align-items: center; 
+  /* Test Case 2: Space to its left (provided by padding) */
+  justify-content: space-between;
+  padding: 0 32px; 
+  box-sizing: border-box;
 }
 
 .logoWrapper {

@@ -1,20 +1,24 @@
-import searchIcon from "../../assets/search-icon.svg"
-import styles from "./Search.module.css"
-const Search = () => {
+import React from "react";
+import styles from "./Search.module.css";
+import { ReactComponent as SearchIcon } from "../../assets/search-icon.svg";
+
+const Search = ({ placeholder }) => {
+  const onSubmit = (e) => {
+    e.preventDefault();
+    // Search logic here
+  };
+
   return (
-    <div className={styles.search}>
+    <form className={styles.wrapper} onSubmit={onSubmit}>
       <input
-        type="text"
-        placeholder="Search a album of your choice"
+        className={styles.search}
+        placeholder={placeholder}
+        required
       />
-      <button className={styles.iconButton}>
-        <img
-          src={searchIcon}
-          alt="search"
-          className={styles.icon}
-        />
+      <button className={styles.searchButton} type="submit">
+        <SearchIcon />
       </button>
-    </div>
+    </form>
   );
 };
 

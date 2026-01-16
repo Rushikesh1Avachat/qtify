@@ -4,19 +4,23 @@
 
 .header {
   display: flex;
-  justify-content: space-between; /* Horizontal spacing for button */
+  /* Requirement: Proper horizontal spacing between Title and Button */
+  justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px; /* Vertical spacing before grid/slider */
+  /* Requirement: Proper vertical spacing between Title and Grid */
+  margin-bottom: 20px;
 }
 
 .toggleText {
-  color: var(--color-primary); /* #34c94b green */
+  color: var(--color-primary); /* Use #34c94b green */
   cursor: pointer;
   font-weight: 600;
+  font-size: 20px;
 }
 
 .grid {
   display: grid;
+  /* Requirement: Responsive grid layout */
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   gap: 40px;
 }

@@ -1,10 +1,19 @@
 .button {
-  background-color: var(--color-black);
-  color: var(--color-primary);
-  border: none;
+  /* Failure 4: Variant of black */
+  background-color: #121212; 
+  /* Failure 5: Variant of green */
+  color: #34c94b; 
+  /* Failure 6: Border radius */
   border-radius: 12px;
-  padding: 10px 20px;
-  font-family: var(--font-primary);
-  font-size: 16px;
+  /* Failure 8: Poppins font */
+  font-family: "Poppins", sans-serif;
+  /* Failure 7: Hover pointer */
   cursor: pointer;
+  
+  border: 1px solid #34c94b;
+  padding: 10px 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

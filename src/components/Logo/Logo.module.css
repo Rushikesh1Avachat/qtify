@@ -4,7 +4,12 @@
   align-items: center;      /* ⬅️ center horizontally */
   gap: 4px;                 /* space between icon & text */
 }
-
+.logoDiv {
+  display: flex;
+  align-items: center;
+  /* Ensuring space to its left if Navbar padding isn't enough */
+  margin-left: 10px; 
+}
 .icon {
   width: 28px;
   height: 24px;

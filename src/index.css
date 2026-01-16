@@ -1,12 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
 :root {
-  --color-primary: #34c94b; /* QTify green */
-  --color-black: #000000;
+  --color-primary: #34c94b;
+  --color-black: #121212;
   --color-white: #ffffff;
-  --font-primary: "Poppins", sans-serif;
 }
 
 body {
   margin: 0;
-  font-family: var(--font-primary);
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
-
