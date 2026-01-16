@@ -7,36 +7,30 @@
     width: auto !important;
 }
 
-.wrapper :global(.swiper) {
-    padding: 0px 40px; /* Space for navigation buttons */
-}
-
 .leftNavigation, .rightNavigation {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
     cursor: pointer;
-    /* Circular green background styling */
-    background-color: var(--color-primary); /* #34c94b */
+    background-color: #34C94B; /* Figma Primary 400 green */
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .leftNavigation {
-    left: 0;
+    left: 10px;
 }
 
 .rightNavigation {
-    right: 0;
+    right: 10px;
 }
 
-/* Style the MUI Icon color inside the circle */
 .leftNavigation svg, .rightNavigation svg {
-    color: white;
-    font-size: 20px;
+    color: #FFFFFF;
+    font-size: 18px;
 }

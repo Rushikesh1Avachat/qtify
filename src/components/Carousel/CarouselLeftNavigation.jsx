@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useSwiper } from 'swiper/react';
-import styles from './Carousel.module.css';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import styles from './Carousel.module.css';
 
 export default function CarouselLeftNavigation() {
     const swiper = useSwiper();
-    const [isBeginning, setIsBeginning] = useState(true);
+    const [isBeginning, setIsBeginning] = useState(swiper.isBeginning);
 
     useEffect(() => {
         swiper.on("slideChange", () => {
@@ -15,7 +15,9 @@ export default function CarouselLeftNavigation() {
 
     return (
         <div className={styles.leftNavigation}>
-            {!isBeginning && <ArrowBackIosNewIcon onClick={() => swiper.slidePrev()} />}
+            {!isBeginning && (
+                <ArrowBackIosNewIcon onClick={() => swiper.slidePrev()} />
+            )}
         </div>
     );
 }
