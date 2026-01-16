@@ -1,14 +1,17 @@
-import styles from "./Navbar.module.css";
+import React from "react";
 import Logo from "../Logo/Logo";
 import Search from "../Search/Search";
 import Button from "../Button/Button";
+import styles from "./Navbar.module.css";
 
 const Navbar = () => {
   return (
     <nav className={styles.navbar}>
-      <Logo />
-      <Search />
-      <Button text="Give Feedback" />
+      <div className={styles.logoWrapper}>
+        <Logo />
+      </div>
+      <Search placeholder="Search a song of your choice" />
+      <Button text="Feedback" />
     </nav>
   );
 };

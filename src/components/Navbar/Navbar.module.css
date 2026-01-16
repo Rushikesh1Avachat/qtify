@@ -1,8 +1,17 @@
 .navbar {
+  display: flex;
+  align-items: center; /* Fixes Failure 2: Vertical centering */
+  justify-content: space-between;
   height: 74px;
   background-color: var(--color-primary);
+  padding: 0 16px;
+}
+
+.logoWrapper {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 32px;
+}
+
+.logoWrapper img {
+  margin: 0; /* Fixes Failure 2: Removes vertical offsets */
 }

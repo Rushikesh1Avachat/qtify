@@ -1,0 +1,22 @@
+.sectionWrapper {
+  padding: 20px 40px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between; /* Horizontal spacing for button */
+  align-items: center;
+  margin-bottom: 20px; /* Vertical spacing before grid/slider */
+}
+
+.toggleText {
+  color: var(--color-primary); /* #34c94b green */
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 40px;
+}
