@@ -1,24 +1,21 @@
 .hero {
-  /* Aligns with your current CSS logic */
-  height: 529px; 
-  background-color: var(--color-black); /* Defined as #121212 */
+  background-color: #121212; /* var(--color-black) */
+  height: 270px;
   display: flex;
-  align-items: center; /* Vertically centered */
-  justify-content: center; /* Horizontally centered */
-  gap: 40px;
-  color: var(--color-white);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+  
+  /* Fix: Text color for visibility */
+  color: #ffffff; 
   font-family: "Poppins", sans-serif;
 }
 
 .hero h1 {
+  /* Matches the bold white text in the screenshot */
   font-size: 32px;
   line-height: 48px;
   font-weight: 600;
-  text-align: center;
   margin: 0;
-}
-
-.hero img {
-  display: flex;
-  object-fit: contain;
 }
