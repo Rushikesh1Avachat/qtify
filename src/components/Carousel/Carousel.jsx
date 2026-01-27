@@ -48,4 +48,3 @@ function Carousel({ data, renderComponent }) {
 }
 
 export default Carousel;
-
