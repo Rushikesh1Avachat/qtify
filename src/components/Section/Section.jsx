@@ -1,5 +1,4 @@
 import { CircularProgress } from "@mui/material";
-import React, { useEffect } from "react";
 import { useState } from "react";
 import Card from "../Card/Card";
 import Carousel from "../Carousel/Carousel";

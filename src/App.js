@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Hero from "./components/Hero/Hero";
-import HomePage from "./pages/HomePage/HomePage";
+
 import Navbar from "./components/Navbar/Navbar";
 import { Outlet } from "react-router-dom";
 import {
@@ -14,12 +13,6 @@ import { StyledEngineProvider } from "@mui/system";
 function App() {
   const [data, setData] = useState({});
 
-  // const r = {
-  //   topAlbums: [{}, {}, {}, {}],
-  //    newAlbums: [{}, {}, {}, {}],
-  //    genres: ['rock', 'pop', 'jazz'],
-  //    songs: []
-  // };
 
   const generateData = (key, source) => {
     source().then((data) => {
@@ -49,11 +42,6 @@ function App() {
   );
 }
 
-// {data: {
-//   topAlbums: [],
-//   newAlbums: [],
-//   genres: [],
-//   songs: []
-// }}
+
 
 export default App;
