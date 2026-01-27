@@ -14,6 +14,7 @@ function App() {
   const [data, setData] = useState({});
 
 
+
   const generateData = (key, source) => {
     source().then((data) => {
       setData((prevState) => {
@@ -42,6 +43,11 @@ function App() {
   );
 }
 
-
+// {data: {
+//   topAlbums: [],
+//   newAlbums: [],
+//   genres: [],
+//   songs: []
+// }}
 
 export default App;
