@@ -7,11 +7,7 @@ export default function CarouselRightNavigation() {
   const swiper = useSwiper();
   const [isEnd, setIsEnd] = useState(swiper.isEnd);
 
-  // useEffect(() => {
-  //   swiper.on("slideChange", function () {
-  //     setIsEnd(swiper.isEnd);
-  //   });
-  // }, []);
+
 
   swiper.on("slideChange", function () {
     setIsEnd(swiper.isEnd);
