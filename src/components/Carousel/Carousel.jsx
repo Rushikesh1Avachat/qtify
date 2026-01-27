@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import { Navigation } from "swiper/modules";
+
 import styles from "./Carousel.module.css";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -22,16 +23,19 @@ function Carousel({ data, renderComponent }) {
   return (
     <div className={styles.wrapper}>
       <Swiper
+        style={{ padding: "0px 20px" }}
+        initialSlide={0}
         modules={[Navigation]}
         slidesPerView="auto"
         spaceBetween={40}
         allowTouchMove
-        style={{ padding: "0px 20px" }}
       >
         <Controls data={data} />
 
-        <CarouselLeftNavigation />
-        <CarouselRightNavigation />
+        <div>
+          <CarouselLeftNavigation />
+          <CarouselRightNavigation />
+        </div>
 
         {data.map((ele, index) => (
           <SwiperSlide key={index}>
