@@ -1,21 +1,9 @@
 .hero {
-  background-color: #121212; /* var(--color-black) */
+  background-color: var(--color-black);
   height: 270px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   gap: 30px;
-  
-  /* Fix: Text color for visibility */
-  color: #ffffff; 
-  font-family: "Poppins", sans-serif;
-}
-
-.hero h1 {
-  /* Matches the bold white text in the screenshot */
-  font-size: 32px;
-  line-height: 48px;
-  font-weight: 600;
-  margin: 0;
 }

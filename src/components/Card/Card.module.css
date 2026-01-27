@@ -1,46 +1,46 @@
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  width: 159px; /* standard card width from Figma */
+  width: 160px;
 }
 
 .card {
   position: relative;
-  width: 159px;
+  width: 160px;
   height: 205px;
   border-radius: 10px;
-  overflow: hidden; /* Ensures image and banner respect border-radius */
-  background-color: var(--color-white);
-}
-
-.card img {
-  width: 100%;
-  height: 170px;
-  object-fit: cover;
+  overflow: hidden;
+  /* cursor: grab; */
 }
 
 .banner {
-  height: 35px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 42px;
   background-color: var(--color-white);
   display: flex;
   align-items: center;
-  padding: 0px 8px;
+  padding: 6px;
+}
+
+.pill {
+  font-size: 12px;
+  background-color: var(--color-black);
+  width: max-content;
+  padding: 6px;
+  border-radius: 10px;
+}
+
+.titleWrapper {
+  margin-top: 6px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
 }
 
 .chip {
-  background-color: var(--color-black) !important;
-  color: var(--color-white) !important;
-  font-family: "Poppins", sans-serif !important;
-  font-size: 10px !important;
-}
-
-.titleWrapper p {
-  color: var(--color-white);
-  font-size: 14px;
-  font-family: "Poppins", sans-serif;
-  margin: 0;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
+  background-color: var(--color-black);
+  color: white;
 }

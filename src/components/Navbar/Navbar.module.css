@@ -1,18 +1,9 @@
 .navbar {
-  width: 100%;
+  background-color: var(--color-primary);
   height: 74px;
-  background-color: var(--color-primary); /* Usually green in Crio projects */
-  display: flex;
-  align-items: center; /* Requirement #2: Vertically centered */
-  justify-content: space-between;
-  padding: 0 32px; /* Requirement #2: Space to the left of the logo */
-}
-
-.logoWrapper {
+  width: 100vw;
+  padding: 0px 32px;
   display: flex;
   align-items: center;
-}
-
-.logoWrapper img {
-  margin: 0; /* Fixes Failure 2: Removes vertical offsets */
+  justify-content: space-between;
 }

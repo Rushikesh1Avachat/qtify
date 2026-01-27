@@ -1,21 +1,23 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import Button from "../Button/Button";
 import Logo from "../Logo/Logo";
 import Search from "../Search/Search";
-import Button from "../Button/Button";
 import styles from "./Navbar.module.css";
 
-const Navbar = () => {
+function Navbar({ searchData }) {
   return (
     <nav className={styles.navbar}>
-      <div className={styles.logoWrapper}>
+      <Link to="/">
         <Logo />
-      </div>
-      {/* Requirement #3: Must contain the keyword 'search' */}
-      <Search placeholder="search an album of your choice" />
-      {/* Requirement #4-8: Handled via CSS in the Button component or passed classes */}
-      <Button text="Give Feedback" />
+      </Link>
+      <Search
+        placeholder="Search a song of your choice"
+        searchData={searchData}
+      />
+      <Button>Give Feedback</Button>
     </nav>
   );
-};
+}
 
 export default Navbar;

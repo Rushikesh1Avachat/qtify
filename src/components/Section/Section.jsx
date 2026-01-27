@@ -1,63 +1,71 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import { CircularProgress, Box } from "@mui/material";
+import { CircularProgress } from "@mui/material";
+import React, { useEffect } from "react";
+import { useState } from "react";
 import Card from "../Card/Card";
 import Carousel from "../Carousel/Carousel";
+import Filters from "../Filters/Filters";
 import styles from "./Section.module.css";
 
-const Section = ({ title, endpoint, type }) => {
-  const [data, setData] = useState([]);
-  // Test Requirement: Default must be true (collapsed) to show "Show All"
-  const [isCollapsed, setIsCollapsed] = useState(true);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(endpoint);
-        setData(response.data);
-      } catch (error) {
-        console.error(`Error fetching ${title}:`, error);
-      }
-    };
-    fetchData();
-  }, [endpoint, title]);
+export default function Section({ title, data, filterSource, type }) {
+  const [filters, setFilters] = useState([{ key: "all", label: "All" }]);
+  const [selectedFilterIndex, setSelectedFilterIndex] = useState(0);
+  const [carouselToggle, setCarouselToggle] = useState(true);
 
   const handleToggle = () => {
-    setIsCollapsed(!isCollapsed);
+    setCarouselToggle((prevState) => !prevState);
   };
 
+  useEffect(() => {
+    if (filterSource) {
+      filterSource().then((response) => {
+        const { data } = response;
+        setFilters([...filters, ...data]);
+      });
+    }
+  }, []);
+
+  const showFilters = filters.length > 1; //true
+  const cardsToRender = data.filter((card) =>
+    showFilters && selectedFilterIndex !== 0
+      ? card.genre.key === filters[selectedFilterIndex].key
+      : card
+  );
+  console.log(data);
   return (
-    <div className={styles.sectionWrapper}>
+    <div>
       <div className={styles.header}>
         <h3>{title}</h3>
-        {/* Test Requirement: Text must be exactly "Show All" or "Collapse" */}
         <h4 className={styles.toggleText} onClick={handleToggle}>
-          {isCollapsed ? "Show All" : "Collapse"}
+          {!carouselToggle ? "Collapse All" : "Show All"}
         </h4>
       </div>
-      
+      {showFilters && (
+        <div className={styles.filterWrapper}>
+          <Filters
+            filters={filters}
+            selectedFilterIndex={selectedFilterIndex}
+            setSelectedFilterIndex={setSelectedFilterIndex}
+          />
+        </div>
+      )}
       {data.length === 0 ? (
-        <Box sx={{ display: 'flex', justifyContent: 'center', py: 5 }}>
-          <CircularProgress color="success" />
-        </Box>
+        <CircularProgress />
       ) : (
-        <div className={styles.content}>
-          {!isCollapsed ? (
-            <div className={styles.grid}>
-              {data.map((item) => (
-                <Card key={item.id} data={item} type={type} />
+        <div className={styles.cardsWrapper}>
+          {!carouselToggle ? (
+            <div className={styles.wrapper}>
+              {cardsToRender.map((ele) => (
+                <Card data={ele} type={type} />
               ))}
             </div>
           ) : (
-            <Carousel 
-              data={data} 
-              renderComponent={(item) => <Card data={item} type={type} />} 
+            <Carousel
+              data={cardsToRender}
+              renderComponent={(data) => <Card data={data} type={type} />}
             />
           )}
         </div>
       )}
     </div>
   );
-};
-
-export default Section;
+}

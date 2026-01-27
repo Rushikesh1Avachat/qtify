@@ -1,45 +1,39 @@
-.wrapper {
-  display: flex;
-  align-items: center;
-  width: 568px; /* Standard Qtify desktop width */
-  height: 48px;
-  position: relative;
+.search {
+  padding: 14px 20px;
+  height: 100%;
+  border-radius: 8px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border: 1px solid var(--color-black);
+  width: 502px;
 }
 
-.search {
-  width: 100%;
-  height: 100%;
-  padding: 0 15px;
-  
-  /* Matches the image styling */
-  background-color: #ffffff;
-  border: 1px solid #121212;
-  border-radius: 8px 0 0 8px; /* Left side rounded */
-  
-  /* Font and text styling */
-  font-family: "Poppins", sans-serif;
-  font-size: 14px;
-  outline: none;
+.wrapper {
+  display: flex;
+  align-items: stretch;
+  height: 48px;
 }
 
 .searchButton {
-  width: 66px;
+  border-radius: 0px 8px 8px 0px;
+  padding: 14px 20px;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-  /* Border styling to match the input */
-  background-color: #ffffff;
-  border: 1px solid #121212;
-  border-left: none; /* Removes double border between input and button */
-  border-radius: 0 8px 8px 0; /* Right side rounded */
-  
+  border: 1px solid var(--color-black);
+  border-left: none;
   cursor: pointer;
+  height: 100%;
 }
 
-/* Ensure the SVG icon inside matches the image size */
-.searchButton svg {
-  width: 20px;
-  height: 20px;
+.listElement {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.albumTitle {
+  font-size: 16px;
+}
+
+.albumArtists {
+  font-size: 12px;
 }
