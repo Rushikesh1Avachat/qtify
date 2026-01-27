@@ -29,7 +29,7 @@ function Filters({ filters, selectedFilterIndex, setSelectedFilterIndex }) {
         }}
       >
         {filters.map((ele, idx) => (
-          <Tab className={styles.tab} label={ele.label} {...a11yProps(idx)} />
+          <Tab key={idx} className={styles.tab} label={ele.label} {...a11yProps(idx)} />
         ))}
       </Tabs>
     </div>
